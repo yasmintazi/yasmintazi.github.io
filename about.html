@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css"/>
+        <link rel="stylesheet" href="./page.css"/>
+        <title>about | ysmn</title>
+        <style>
+        :root {
+            --accent: #ccc7aa;
+            --text: #f3ece4;
+            --muted: #d9c3b4;
+            --panel: rgba(45, 30, 24, 0.55);
+        }
+        body {
+            background: linear-gradient(#64483a 20%, #c8a99c 95%);
+            background-attachment: fixed;
+        }
+        .topnav a {
+            color: #492c28;
+        }
+        .topnav a:hover {
+            background-color: #41312b;
+            color: #a98b65;
+        }
+        .topnav a.active {
+            color: #ccc7aa;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="topnav">
+            <a href="index.html">home</a>
+            <a class="active" href="about.html">about</a>
+            <a href="works.html">works</a>
+            <a href="contact.html">contact</a>
+        </div>
+
+        <main class="page">
+            <h1>about me</h1>
+            <p class="lede">computer science student, game developer, artist</p>
+
+            <div class="panel">
+                <p>Hi, I'm Yasmin! I'm studying Computer Science in Interactive Media &amp; Game Development at DigiPen Institute of Technology Singapore. I like working on what's under the hood of a game: engine architecture, collision, and the tools that make building content less painful.</p>
+                <p>Before DigiPen I did a Diploma in Computer Engineering at Temasek Polytechnic, and worked as a software engineering intern at Inspiraz Technology and as an IoT engineer at groundup.ai. I speak English, Arabic and French.</p>
+            </div>
+
+            <h2>education</h2>
+            <div class="panel">
+                <h3>DigiPen Institute of Technology Singapore</h3>
+                <p class="meta">B.S. in Computer Science &middot; expected Apr 2028</p>
+                <p>Coursework: Game Engine Architecture, Data Structures &amp; Algorithms, Game AI, Physics for Games, Operating Systems, Linear Algebra, Discrete Mathematics, Game Systems Design</p>
+            </div>
+            <div class="panel">
+                <h3>Temasek Polytechnic</h3>
+                <p class="meta">Diploma in Computer Engineering &middot; Apr 2020 &ndash; Apr 2023</p>
+            </div>
+
+            <h2>experience</h2>
+            <div class="panel">
+                <h3>Software Engineering Intern</h3>
+                <p class="meta">Inspiraz Technology</p>
+            </div>
+            <div class="panel">
+                <h3>IoT Engineer</h3>
+                <p class="meta">groundup.ai</p>
+            </div>
+
+            <h2>skills</h2>
+            <div class="panel">
+                <p class="meta">languages</p>
+                <ul class="tags">
+                    <li>C++</li><li>C</li><li>C#</li><li>Python</li><li>JavaScript</li>
+                </ul>
+                <p class="meta" style="margin-top:16px">engines &amp; tools</p>
+                <ul class="tags">
+                    <li>Unreal Engine</li><li>Unity</li><li>OpenGL</li><li>custom ECS</li>
+                    <li>Git</li><li>Visual Studio</li><li>3ds Max</li>
+                </ul>
+                <p class="meta" style="margin-top:16px">things I know a lot about</p>
+                <ul class="tags">
+                    <li>engine architecture</li><li>collision detection</li><li>spatial partitioning</li>
+                    <li>ray-triangle picking</li><li>A* pathfinding</li><li>behavior trees</li><li>procedural generation</li>
+                </ul>
+            </div>
+
+            <p class="back"><a href="index.html">&larr; back to the conversation</a></p>
+        </main>
+    </body>
+</html>

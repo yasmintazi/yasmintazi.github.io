@@ -1,0 +1,145 @@
+.button1 {
+    background-color: #9175cb;
+    color: #19131b; 
+    border: 2px solid #19131b;
+    border-radius: 20px; 
+    font-size: 12px;
+    padding: 10px;
+}
+/* a:link {
+    color: #e8adf5;
+}
+a:visited {
+    
+    color:#19131b;
+}
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  } */
+
+.name {
+    display: block;
+    width: 100%;
+
+}
+/* navigation bar */
+.topnav {
+    display: flex;
+    justify-content: space-between;
+}
+.topnav a {
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+ .top-container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.portrait {
+    display: inline-block;
+    position: absolute;
+    margin-left: 130px;
+    width: 10%;
+    height: 200px;
+    /* the drawing is wider than the frame, so keep the face (right of center) in view */
+    background:url(./pics/art/Self_Portrait.jpg) no-repeat 68% center / cover;
+}
+
+.middle-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 50px;
+    padding: 20px;
+    margin-left: 270px;;
+    background: rgba(25, 25, 25, 0.7);
+}
+
+.dialogue-lines {
+    font-family: 'PT Serif', serif;
+    font-size: 16px;
+    text-indent: 0.5em; 
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing;
+    animation-duration: 2.7s;
+    animation-timing-function: steps(60, end);
+    animation-fill-mode: forwards;
+}
+.dialogue-lines.instant {
+    width: 100%;
+    animation: none;
+}
+/* once a line has finished typing, let long text wrap instead of being cut off */
+.dialogue-lines.instant,
+.dialogue-lines.typed {
+    white-space: normal;
+}
+.dialogue-lines > p:first-child {
+    flex: none;
+}
+.dialogue-lines > p {
+    min-width: 0;
+}
+
+@media (max-width: 700px) {
+    .portrait {
+        position: static;
+        display: block;
+        margin: 20px auto 0;
+        width: 140px;
+        height: 160px;
+    }
+    .middle-container {
+        margin: 20px 16px;
+        padding: 14px;
+    }
+}
+
+.dialogue-options {
+    font-family: 'PT Serif', serif;
+    font-size: 16px;
+    text-indent: 0.5em; 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+    white-space: wrap;
+}
+
+
+.dialogue-options > p {
+    -webkit-transition: color 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out;
+    transition: color 0.3s ease-out;
+} 
+.dialogue-options > p:hover {
+    color: #a44b2f;
+    cursor: pointer;
+  } 
+.dialogue-options > p:visited {
+    color: black;
+}
+@keyframes typing {
+    from { width: 0;}
+    to { width: 100% }
+}
+@keyframes hidden-typing {
+    from { width: 0;
+    display: none}
+    to { width: 100%;
+    display: flex}
+}

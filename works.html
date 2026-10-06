@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css"/>
+        <link rel="stylesheet" href="./page.css"/>
+        <title>works | ysmn</title>
+        <style>
+        :root {
+            --accent: #9bc45c;
+            --text: #e6ece0;
+            --muted: #b5c49a;
+            --panel: rgba(15, 25, 16, 0.6);
+        }
+        body {
+            background: linear-gradient(#1e3020 20%, #455927 95%);
+            background-attachment: fixed;
+        }
+        .topnav a {
+            color: #87ae4c;
+        }
+        .topnav a:hover {
+            background-color: #736e24;
+            color: #87ae4c;
+        }
+        .topnav a.active {
+            color: #d0d9d7;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="topnav">
+            <a href="index.html">home</a>
+            <a href="about.html">about</a>
+            <a class="active" href="works.html">works</a>
+            <a href="contact.html">contact</a>
+        </div>
+
+        <main class="page">
+            <h1>works</h1>
+            <p class="lede">things I've built, broken, and fixed</p>
+
+            <div class="panel">
+                <h3>Rock &amp; Ghoul</h3>
+                <p class="meta">C++ game engine &middot; collision &middot; team aviddivas &middot; Apr 2026</p>
+                <ul>
+                    <li>Team game built on our own custom C++ engine with an ECS architecture.</li>
+                    <li>Built the collision system's broad phase: a spatial grid that sorts objects into cells, so each object is only tested against objects in nearby cells instead of against everything in the level.</li>
+                </ul>
+            </div>
+
+            <div class="panel">
+                <h3>Cat Walking Simulator</h3>
+                <p class="meta">solo &middot; Unreal Engine 5 &middot; Jul 2026 &middot; <a href="https://bluhenin.itch.io/walking-simulator-project" target="_blank" rel="noopener">play it on itch.io</a></p>
+                <ul>
+                    <li>Built a first-person walking simulator in Unreal Engine 5. You play a witch's cat who ran away and got lost, and have to find your way home through a stylized village at dusk to the tall tower looming over it.</li>
+                    <li>Composed each scene with framing, silhouettes and warm-against-cool lighting so the light in the tower window always draws the player's eye toward home.</li>
+                </ul>
+                <div class="gallery wide">
+                    <figure><img src="pics/walking-sim/SceneComp1.png" alt="forest path framed by dark trees, with a lit tower window in the distance"><figcaption>the path in</figcaption></figure>
+                    <figure><img src="pics/walking-sim/SceneComp2.png" alt="dark trees and buildings framing the glowing tower"><figcaption>the village</figcaption></figure>
+                    <figure><img src="pics/walking-sim/SceneComp3.png" alt="looking up at the tower with its glowing window"><figcaption>the tower</figcaption></figure>
+                </div>
+
+                <h3 class="gallery-title">the scrapped first version</h3>
+                <p>Before the forest, the walking sim was set in a city at night: streets and alleys lit by street lamps and shop signs, a café terrace, a roadblock of traffic cones, and a few interiors (a shop and a bedroom). It didn't fit the project requirements, so I scrapped it and rebuilt the level from scratch, but it's where I first practiced lighting a scene to guide the player.</p>
+                <div class="gallery wide">
+                    <figure><img src="pics/walking-sim/scrapped/city1.webp" alt="overhead view of a night street with pink sidewalks and traffic cones"><figcaption>the block</figcaption></figure>
+                    <figure><img src="pics/walking-sim/scrapped/city2.webp" alt="green car driving down a narrow street between buildings"><figcaption>the narrow street</figcaption></figure>
+                    <figure><img src="pics/walking-sim/scrapped/city3.webp" alt="alley with a street lamp, stacked boxes and a parked car"><figcaption>the alley</figcaption></figure>
+                    <figure><img src="pics/walking-sim/scrapped/city4.webp" alt="street with glowing shop signs and a café terrace"><figcaption>the café street</figcaption></figure>
+                    <figure><img src="pics/walking-sim/scrapped/city5.webp" alt="shop interior with white shelves and a black display cabinet"><figcaption>the shop</figcaption></figure>
+                    <figure><img src="pics/walking-sim/scrapped/city6.webp" alt="bedroom interior with a teal bed, desk and open window"><figcaption>the bedroom</figcaption></figure>
+                    <figure><img src="pics/walking-sim/scrapped/city7.webp" alt="traffic cones and barriers in a dark alley under a green-lit balcony"><figcaption>the roadblock</figcaption></figure>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h3>Spot the Difference (in progress)</h3>
+                <p class="meta">solo &middot; Unity &middot; C# &middot; Sep 2026</p>
+                <ul>
+                    <li>A horror spot-the-difference game. It opens on a sketchy job board offering $100 to "play a game", and you sign up as a beta tester. Each of the 10 levels puts a normal photo next to a "wrong" copy, and you have to find every difference to move on, as they go from odd to gory.</li>
+                    <li>Gameplay scripted in C#: clickable anomalies that know when a level is fully cleared, a buzzer for wrong clicks, differences that creep in or fade in over time, a how-to-play popup that pauses the game, and a jumpscare that rushes at the screen and shakes.</li>
+                </ul>
+                <div class="gallery">
+                    <figure><img src="pics/spot-the-difference/job-ad.png" alt="hand-drawn job ad: game tester, $15 an hour, with a download button"><figcaption>the job ad</figcaption></figure>
+                    <figure><img src="pics/spot-the-difference/how-to-play.png" alt="hand-drawn how to play screen showing a normal side and a wrong side"><figcaption>how to play</figcaption></figure>
+                    <figure><img src="pics/spot-the-difference/gameplay1.png" alt="gameplay screenshot"><figcaption>gameplay</figcaption></figure>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h3>3D Scene Debug Visualizer</h3>
+                <p class="meta">C++ &middot; OpenGL &middot; Feb 2026</p>
+                <ul>
+                    <li>Implemented bounding-volume construction, collision detection, and ray-triangle picking for real-time 3D scene debugging.</li>
+                </ul>
+            </div>
+
+            <h2>art &amp; 3d models</h2>
+            <div class="panel">
+                <p>When I'm not writing engine code, I'm usually drawing or modeling. Drawing is how I figure out characters, moods and ideas before they turn into anything playable, and 3D modeling (mostly in 3ds Max) is how I bring them into a game. Making my own art means I understand both sides of the pipeline: what artists need from the tools, and what the engine needs from the assets.</p>
+            </div>
+
+            <h3 class="gallery-title">drawings</h3>
+            <div class="gallery">
+                <figure><img src="pics/art/Human_Gibby.jpg" alt="drawing"><figcaption>my cat anthropomorphized</figcaption></figure>
+                <figure><img src="pics/art/Self_Sketch2.jpg" alt="drawing"><figcaption>me in my dorm</figcaption></figure>
+                <figure><img src="pics/art/Self_Sketch.jpg" alt="drawing"><figcaption>quick self sketch</figcaption></figure>
+                <figure><img src="pics/art/Self_Portrait.jpg" alt="drawing"><figcaption>disco elysium inspired self-portrait</figcaption></figure>
+
+            </div>
+
+            <h3 class="gallery-title">3d models</h3>
+            <div class="panel">
+                <h3>The Room</h3>
+                <p class="meta">3ds Max &middot; modeled &amp; textured by me</p>
+                <p>A room scene I modeled and textured in 3ds Max. Every prop is my own: the door, chair, table, cupboard, clock, light, chains, lock, and the monster. Drag to look around, scroll to zoom.</p>
+                <div class="model-viewer" data-model="models/room/yasmin_finalscene.fbx">
+                    <p class="model-status">loading model…</p>
+                </div>
+            </div>
+
+            <dialog id="lightbox">
+                <img src="" alt="">
+                <p></p>
+            </dialog>
+
+            <p>More of my games are on <a href="https://bluhenin.itch.io/" target="_blank" rel="noopener">itch.io</a> and code is on <a href="https://github.com/yasmintazi" target="_blank" rel="noopener">GitHub</a>.</p>
+
+            <p class="back"><a href="index.html">&larr; back to the conversation</a></p>
+        </main>
+        <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+            }
+        }
+        </script>
+        <script type="module" src="model-viewer.js"></script>
+        <script>
+        // empty frame for pictures that haven't been added yet
+        document.querySelectorAll('.gallery img').forEach(function(img) {
+            function missing() { img.closest('figure').classList.add('empty'); }
+            img.addEventListener('error', missing);
+            if (img.complete && img.naturalWidth === 0) missing();
+        });
+
+        // click a picture to see it bigger, click again to close
+        var box = document.getElementById('lightbox');
+        document.querySelectorAll('.gallery figure').forEach(function(fig) {
+            fig.addEventListener('click', function() {
+                if (fig.classList.contains('empty')) return;
+                box.querySelector('img').src = fig.querySelector('img').src;
+                box.querySelector('p').textContent = fig.querySelector('figcaption').textContent;
+                box.showModal();
+            });
+        });
+        box.addEventListener('click', function() { box.close(); });
+        </script>
+    </body>
+</html>

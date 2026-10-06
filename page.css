@@ -1,0 +1,250 @@
+/* shared layout for the about / works / contact pages.
+   each page sets its own colors through the variables below. */
+:root {
+    --accent: #9175cb;
+    --text: #e8e2d6;
+    --muted: #b8b0a2;
+    --panel: rgba(25, 25, 25, 0.55);
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    color: var(--text);
+    font-family: 'PT Serif', serif;
+}
+
+.page {
+    max-width: 860px;
+    margin: 20px auto 60px;
+    padding: 0 16px;
+}
+
+.page h1 {
+    font-family: 'VT323', monospace;
+    font-size: 64px;
+    color: var(--accent);
+    margin-bottom: 0;
+}
+
+.page .lede {
+    font-family: 'VT323', monospace;
+    font-size: 22px;
+    color: var(--muted);
+    margin-bottom: 30px;
+}
+
+.page h2 {
+    font-family: 'VT323', monospace;
+    font-size: 30px;
+    color: var(--accent);
+    margin: 30px 0 12px;
+}
+
+.panel {
+    background: var(--panel);
+    padding: 20px 24px;
+    margin-bottom: 18px;
+    border-left: 3px solid var(--accent);
+}
+
+.panel h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.panel .meta {
+    font-family: 'VT323', monospace;
+    font-size: 19px;
+    color: var(--muted);
+    margin: 2px 0 10px;
+}
+
+.panel ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.panel li {
+    margin-bottom: 6px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tags li {
+    font-family: 'VT323', monospace;
+    font-size: 18px;
+    padding: 2px 10px;
+    border: 1px solid var(--accent);
+    color: var(--text);
+}
+
+.page a {
+    color: var(--accent);
+}
+
+.page a:hover {
+    color: var(--text);
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+}
+
+.contact-list li {
+    margin-bottom: 12px;
+}
+
+.contact-list span {
+    display: inline-block;
+    min-width: 90px;
+    font-family: 'VT323', monospace;
+    font-size: 22px;
+    color: var(--muted);
+}
+
+/* art gallery */
+.gallery-title {
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+    color: var(--muted);
+    margin: 20px 0 10px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 14px;
+    margin-bottom: 10px;
+}
+
+.gallery figure {
+    margin: 0;
+    background: var(--panel);
+    border: 1px solid var(--accent);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: transform 0.3s ease-out;
+}
+
+/* project screenshots: wider frames, a bit of space above */
+.gallery.wide {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    margin-top: 16px;
+}
+
+.gallery.wide img {
+    aspect-ratio: 16 / 9;
+}
+
+.gallery figure:hover img {
+    transform: scale(1.04);
+}
+
+.gallery figcaption {
+    font-family: 'VT323', monospace;
+    font-size: 18px;
+    padding: 6px 10px;
+    color: var(--muted);
+}
+
+.gallery figure.empty {
+    cursor: default;
+    border-style: dashed;
+    opacity: 0.6;
+}
+
+.gallery figure.empty img {
+    visibility: hidden;
+}
+
+.gallery figure.empty figcaption::after {
+    content: ' (coming soon)';
+}
+
+/* interactive 3d model */
+.model-viewer {
+    position: relative;
+    margin-top: 14px;
+    border: 1px solid var(--accent);
+    background: #101810;
+    min-height: 200px;
+}
+
+.model-viewer canvas {
+    display: block;
+    width: 100%;
+    cursor: grab;
+}
+
+.model-viewer canvas:active {
+    cursor: grabbing;
+}
+
+.model-status {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: 'VT323', monospace;
+    font-size: 22px;
+    color: var(--muted);
+}
+
+#lightbox {
+    max-width: 90vw;
+    max-height: 90vh;
+    padding: 10px;
+    border: 1px solid var(--accent);
+    background: #111;
+    color: var(--text);
+    cursor: zoom-out;
+}
+
+#lightbox::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#lightbox img {
+    display: block;
+    max-width: 100%;
+    max-height: 80vh;
+    margin: 0 auto;
+}
+
+#lightbox p {
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    text-align: center;
+    margin: 8px 0 0;
+}
+
+.back {
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+}
+
+@media (max-width: 600px) {
+    .page h1 { font-size: 48px; }
+    .panel { padding: 16px; }
+}
