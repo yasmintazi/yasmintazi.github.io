@@ -180,6 +180,15 @@ body {
     content: ' (coming soon)';
 }
 
+/* project trailers */
+.project-video {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    border: 1px solid var(--accent);
+    background: #000;
+}
+
 /* interactive 3d model */
 .model-viewer {
     position: relative;
